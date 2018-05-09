@@ -1,5 +1,7 @@
 package parking;
 
+import java.util.Scanner;
+
 public class Vehiculo {
 	//Atributos
 	String Matricula;
@@ -38,7 +40,42 @@ public class Vehiculo {
 		return matricula;
 		
 	}
+	
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int ascii=0;
+		String caracteresNodeseados= "aeiouAEIOU";
+		int opcion = 0;
+		do {
+			
+		
+		System.out.println("Introduce");
+		String palabra=in.next();
+		StringBuffer s12=new StringBuffer(palabra);
+		for (int i = 0; i < s12.length(); i++) {
+			if ((caracteresNodeseados.indexOf(s12.charAt(i)))>=0) {
+				//System.out.println(palabra.charAt(i));
+				ascii=(int)s12.charAt(i);
+				System.out.println(i);    //System.out.println(ascii);   d97105id  d97105avid
+				String asciiString = String.valueOf(ascii);
+				s12.replace(i,i+1,asciiString);
+			}
+
+		}
+		palabra=s12.toString();
+		System.out.println("El resultado es "+palabra);
+		System.out.println("Para salir pulse 1");
+		opcion=in.nextInt();
+		} while (opcion != 1);
+
+	}
+}
+
+//9111117151eiou   97 101 105 111 117
+
+
+
+
+
 
 	//ToString
-
-}

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Principal {
 	public static void main(String[] args) {
 		//objeto
-		Parking parkco;
+		Parking parkco = new Parking();
 		Scanner in = new Scanner(System.in);
 		int opcion;
 
@@ -19,6 +19,7 @@ public class Principal {
 			switch (opcion) {
 			case 1:
 				//	objeto.metodo(in);
+				parkco.entrada(in);
 				
 
 				break;
